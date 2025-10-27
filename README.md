@@ -31,3 +31,8 @@ This challenge helps me stay consistent in learning to code — one day at a tim
 ---
 
 ✨ Follow my journey here as I build projects and learn something new every day!
+
+## 🧩 Progress Tracker
+| Day | Topic | Description | Status |
+|-----|--------|--------------|--------|
+| 1 | Hello World | My first Python program uploaded to GitHub | ✅ |
