@@ -1,0 +1,1 @@
+print("Hello, World! This is Day 1 of my 100 Days of Python challenge.")
