@@ -32,10 +32,31 @@ This challenge helps me stay consistent in learning to code — one day at a tim
 
 ✨ Follow my journey here as I build projects and learn something new every day!
 
-## 🧩 Progress Tracker
-| Day | Topic | Description | Status |
-|-----|--------|--------------|--------|
-| 1 | Hello World | My first Python program uploaded to GitHub | ✅ |
+---
+
+## 💻 Day 1 — Hello World Program 💻
+
+### 🔹 Project Title
+**Hello World Program** — My first Python code to print a simple message and start my 100 Days of Python journey.
+
+### 🔹 Project Description
+This is my first ever Python program — the classic “Hello World!” script.  
+It’s simple, but it marks the official start of my Python learning adventure.  
+The goal of this project was to understand how to run a Python script, use the `print()` function, and gain confidence writing code for the first time.
+
+### 🔹 Concepts Used
+- Basic Syntax  
+- `print()` function  
+- Strings and text output  
+- Comment usage (`#`)  
+- Understanding how Python executes code  
+
+### 🔹 Code Snippet
+```python
+# Day 1 – Hello World Program
+# Author: Stuart Abhishek
+
+print("Hello, World! This is Day 1 of my 100 Days of Python challenge.")
 
 ---
 
