@@ -33,6 +33,7 @@ This challenge helps me stay consistent in learning to code — one day at a tim
 ✨ Follow my journey here as I build projects and learn something new every day!
 
 ---
+---
 
 ## 💻 Day 1 — Hello World Program 💻
 
@@ -56,7 +57,8 @@ The goal of this project was to understand how to run a Python script, use the `
 # Day 1 – Hello World Program
 # Author: Stuart Abhishek
 
-print("Hello, World! This is Day 1 of my 100 Days of Python challenge.")
+print("Hello, World! This is Day 1 of my 100 Days of Python challenge.") Hello, World! This is Day 1 of my 100 Days of Python challenge.
+
 
 ---
 
@@ -79,3 +81,15 @@ It’s a creative project that mixes programming logic with inspiration — perf
 - Code Structuring & Comments
 
 ### 🔹 Example Output
+🤖 Welcome to the AI Quote Generator!
+Let's create a personalized quote to inspire you today.
+
+What is your name? Stuart
+What’s one goal you’re working on right now? Python mastery
+
+============================================================
+Good evening, Stuart! 🌟
+Here’s your motivational message:
+💬  Stuart, when you feel like quitting, think about why you started Python mastery.
+============================================================
+~ Program created by Stuart Abhishek (Day 2 of 100 Days of Python) ~
