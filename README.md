@@ -37,4 +37,24 @@ This challenge helps me stay consistent in learning to code — one day at a tim
 |-----|--------|--------------|--------|
 | 1 | Hello World | My first Python program uploaded to GitHub | ✅ |
 
-| 2 | AI Quote Generator | Interactive program that creates personalized motivational quotes using Python | ✅ |
+---
+
+## 🧠 Day 2 — AI-Style Quote Generator 🧠
+
+### 🔹 Project Title
+**AI Quote Generator** — A personalized mini-AI console that creates motivational quotes using Python.
+
+### 🔹 Project Description
+This Python program asks for your **name** and your **current goal**, then generates a **unique motivational quote** personalized for you.  
+It uses Python’s `random` and `datetime` modules to create dynamic, time-based, and encouraging messages.  
+It’s a creative project that mixes programming logic with inspiration — perfect for building consistency in learning.
+
+### 🔹 Concepts Used
+- Variables & User Input  
+- Lists and Random Module  
+- String Formatting (f-strings)  
+- Conditional Statements (if-elif-else)  
+- Datetime Module for real-time greetings  
+- Code Structuring & Comments
+
+### 🔹 Example Output
