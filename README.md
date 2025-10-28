@@ -36,3 +36,5 @@ This challenge helps me stay consistent in learning to code — one day at a tim
 | Day | Topic | Description | Status |
 |-----|--------|--------------|--------|
 | 1 | Hello World | My first Python program uploaded to GitHub | ✅ |
+
+| 2 | AI Quote Generator | Interactive program that creates personalized motivational quotes using Python | ✅ |
