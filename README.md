@@ -1,21 +1,15 @@
+ ---
+
+🐍 100 Days of Python — by Stuart Abhishek
+
+> “Small consistent steps create giant success.” — Stuart Abhishek
 
 
-🐍 100 Days of Python Challenge
 
-Welcome to my 100 Days of Python journey!
-This repository documents my daily progress in mastering Python from beginner to advanced level.
-Each day, I build a new project — starting simple and gradually creating AI-style, data-driven, and logic-based programs.
+Welcome to my 100 Days of Python challenge — a personal mission to master Python, develop real-world problem-solving skills, and build a portfolio that proves passion, discipline, and creativity.
 
-I’m following this challenge to:
-
-Build a strong foundation in Python 🧠
-
-Learn to think like a programmer 💻
-
-Develop creative and impactful projects 🚀
-
-Prepare myself for MIT/Stanford Computer Science goals 🎯
-
+Each day I design, code, and upload a new project — from beginner fundamentals to AI-inspired applications — preparing myself for my dream:
+🎯 IIT Madras → MIT / Stanford Computer Science.
 
 
 ---
@@ -24,8 +18,9 @@ Prepare myself for MIT/Stanford Computer Science goals 🎯
 
 Day	Project	Description	Status
 
-1	Hello World	My first Python program uploaded to GitHub	✅
-2	AI Quote Generator	Interactive motivational quote generator using Python	✅
+1	Hello World	My first Python program — starting my journey	✅
+2	AI Quote Generator	Interactive personalized motivational quote app	✅
+3	Smart Math Quiz	Adaptive arithmetic quiz with scoring system	✅
 
 
 
@@ -40,16 +35,16 @@ Day	Project	Description	Status
 
 🔹 Project Title
 
-Hello World Program — My first step into the Python world.
+Hello World Program — my first ever Python code.
 
-🔹 Project Description
+🔹 Description
 
-This is my first Python program, created on Day 1 of my 100 Days of Python journey.
-It simply prints a welcoming message on the screen and marks the beginning of my coding adventure.
+The simplest beginning: printing a message to prove everything works!
+This moment marks the first step of my lifelong journey into programming.
 
 🔹 Code
 
-# Day 1 - Hello World Program
+# Day 1 – Hello World Program
 # Author: Stuart Abhishek
 
 print("Hello, World! This is Day 1 of my 100 Days of Python challenge.")
@@ -60,13 +55,13 @@ Hello, World! This is Day 1 of my 100 Days of Python challenge.
 
 🔹 What I Learned
 
-How to run my first Python program
+Running my first Python script
 
-How to print messages to the console
+Understanding print()
 
-Importance of syntax and indentation in Python
+Importance of syntax & indentation
 
-The feeling of creating my very first program 💪
+Confidence boost — the journey begins 🚀
 
 
 
@@ -76,57 +71,43 @@ The feeling of creating my very first program 💪
 
 🔹 Project Title
 
-AI Quote Generator — A personalized AI-style motivational quote generator built in Python.
+AI Quote Generator — a personalized console program that delivers motivational quotes.
 
-🔹 Project Description
+🔹 Description
 
-This program asks for your name and your goal, then uses Python’s logic and randomization to generate a unique motivational quote personalized for you.
-It uses Python’s random and datetime modules to make the quotes dynamic and time-based.
-This project shows creativity, interactivity, and early steps toward AI programming.
+Combines creativity and logic: asks for your name & goal, then builds a personalized, time-aware quote using Python’s random and datetime modules.
+It’s my first project that feels alive — like a tiny AI friend.
 
 🔹 Code
 
-# Day 2 - AI-Style Quote Generator 🧠
+# Day 2 – AI-Style Quote Generator
 # Author: Stuart Abhishek
-# Purpose: A small interactive Python program that gives personalized motivational quotes.
 
-import random
-import datetime
+import random, datetime
 
 print("🤖 Welcome to the AI Quote Generator!")
 print("Let's create a personalized quote to inspire you today.\n")
 
-# Ask user for details
 name = input("What is your name? ")
 goal = input("What’s one goal you’re working on right now? ")
 
-# Some smart quotes with placeholders
 quotes = [
-    f"{name}, remember — every expert was once a beginner. Keep pushing toward {goal}!",
-    f"Success doesn’t come from what you do occasionally, {name}, it comes from what you do consistently for {goal}.",
-    f"{name}, when you feel like quitting, think about why you started {goal}.",
-    f"The future belongs to those like {name} who never stop learning while chasing {goal}.",
-    f"{name}, small steps every day towards {goal} will lead to massive results."
+  f"{name}, remember — every expert was once a beginner. Keep pushing toward {goal}!",
+  f"Success doesn’t come from what you do occasionally, {name}, it comes from what you do consistently for {goal}.",
+  f"{name}, when you feel like quitting, think about why you started {goal}.",
+  f"The future belongs to those like {name} who never stop learning while chasing {goal}.",
+  f"{name}, small steps every day towards {goal} will lead to massive results."
 ]
 
-# Pick a random quote
 quote = random.choice(quotes)
-
-# Add a time-based greeting
 hour = datetime.datetime.now().hour
-if hour < 12:
-    greeting = "Good morning"
-elif hour < 18:
-    greeting = "Good afternoon"
-else:
-    greeting = "Good evening"
+greeting = "Good morning" if hour < 12 else "Good afternoon" if hour < 18 else "Good evening"
 
-# Final personalized output
-print("\n" + "="*60)
+print("\n" + "=" * 60)
 print(f"{greeting}, {name}! 🌟")
 print("Here’s your motivational message:")
 print(f"💬  {quote}")
-print("="*60)
+print("=" * 60)
 print("~ Program created by Stuart Abhishek (Day 2 of 100 Days of Python) ~")
 
 🔹 Example Output
@@ -148,63 +129,183 @@ Here’s your motivational message:
 
 Variables & Input
 
-Lists and Random Module
+Lists + random.choice()
 
-String Formatting (f-strings)
+datetime module
 
-Conditional Statements (if-elif-else)
+Conditional Statements
 
-Datetime Module
+Formatted Strings (f-strings)
 
-Code Structuring & Comments
+Readable Code Structure
 
 
 🔹 What I Learned
 
-How to make my code interactive
+Making interactive programs
 
-How to use Python’s built-in modules (random, datetime)
+Mixing logic with emotion through code
 
-How to make output feel human and intelligent
+Documentation and clean layout
 
-How to structure readable, professional-looking programs
-
-
-🔹 Future Improvements
-
-Add more quote categories (study, coding, motivation)
-
-Add color output using colorama
-
-Turn this into a GUI or web-based app in future days
+My first program that feels intelligent 🤖
 
 
-🧠 Day 3 – Smart Math Quiz with Scoring System 🎯
+
+---
+
+🧠 Day 3 — Smart Math Quiz with Scoring System 🎯
 
 🔹 Project Title
-**Smart Math Quiz** — An adaptive Python quiz that challenges your arithmetic skills intelligently.
 
-🔹 Project Description
-This interactive quiz automatically generates random math problems, adjusts difficulty based on performance, and tracks your score in real time. It includes level-ups, penalties, and a final summary.
+Smart Math Quiz — an adaptive Python quiz that tests your math skills and rewards progress.
+
+🔹 Description
+
+An interactive math quiz that auto-generates arithmetic questions, adjusts difficulty based on score, and shows a final performance report.
+Demonstrates functions, loops, conditionals, randomization, and real-time scoring.
+
+🔹 Code
+
+# Day 3 – Smart Math Quiz with Scoring System
+# Author: Stuart Abhishek
+
+import random, time
+
+def generate_question(level):
+  if level == 1:
+    a, b = random.randint(1, 10), random.randint(1, 10)
+    op = random.choice(['+', '-'])
+  elif level == 2:
+    a, b = random.randint(10, 50), random.randint(1, 20)
+    op = random.choice(['+', '-', '*'])
+  else:
+    a, b = random.randint(20, 100), random.randint(1, 25)
+    op = random.choice(['+', '-', '*', '//'])
+  question = f"{a} {op} {b}"
+  return question, eval(question)
+
+def math_quiz():
+  print("🧮 Welcome to the Smart Math Quiz!")
+  print("Answer as many questions as you can. Type 'quit' to stop.\n")
+  level = 1; score = 0; count = 0; start = time.time()
+  while True:
+    count += 1
+    q, ans = generate_question(level)
+    user = input(f"Q{count}: {q} = ")
+    if user.lower() == "quit": break
+    try:
+      if int(user) == ans:
+        score += 10
+        print("✅ Correct!")
+        if score % 50 == 0:
+          level = min(level + 1, 3)
+          print("🚀 Level Up! Difficulty increased.")
+      else:
+        score -= 5
+        print(f"❌ Wrong! Correct answer was {ans}.")
+    except ValueError:
+      print("⚠️ Enter a number or 'quit'.")
+    print(f"Current Score: {score}\n")
+
+  t = round(time.time() - start, 2)
+  print("=" * 55)
+  print("🏁 Quiz Summary")
+  print(f"Questions: {count - 1} | Final Score: {score} | Time: {t}s")
+  if score >= 100: print("🌟 Brilliant work!")
+  elif score >= 50: print("💪 Great job!")
+  else: print("📘 Keep practicing!")
+  print("=" * 55)
+  print("~ Program created by Stuart Abhishek (Day 3 of 100 Days of Python) ~")
+
+if __name__ == "__main__":
+  math_quiz()
+
+🔹 Example Output
+
+🧮 Welcome to the Smart Math Quiz!
+Answer as many questions as you can. Type 'quit' to stop.
+
+Q1: 3 + 4 = 7
+✅ Correct!
+Current Score: 10
+
+Q2: 12 – 8 = 4
+✅ Correct!
+Current Score: 20
+
+Q3: 6 * 5 = 31
+❌ Wrong! Correct answer was 30.
+Current Score: 15
+
+🚀 Level Up! Difficulty increased.
+
+🏁 Quiz Summary
+Questions: 10  | Final Score: 85  | Time: 48.7 s
+💪 Great job! Keep sharpening your mind.
 
 🔹 Concepts Used
-- Functions & Modular Programming  
-- Random Number Generation  
-- Loops & Conditionals  
-- Input Validation  
-- Basic Arithmetic Operations  
-- Score Tracking & Time Measurement
+
+Functions and Modular Design
+
+Loops and Conditionals
+
+Random Number Generation
+
+Scoring & Difficulty Progression
+
+Time Measurement (time module)
+
 
 🔹 What I Learned
-- How to structure functions for clarity  
-- How to make difficulty adaptive  
-- How to measure user performance logically  
-- How to write clean, interactive console programs  
+
+Designing adaptive logic
+
+Writing clean, structured functions
+
+Handling user input gracefully
+
+Thinking algorithmically like an engineer
+
 
 🔹 Future Improvements
-- Add a GUI interface using `tkinter`  
-- Store high scores in a text file  
-- Introduce multiple question types (fractions, powers, etc.)  
+
+Add leaderboard / save scores to file
+
+Introduce GUI using tkinter
+
+Add division and power levels for advanced math
+
+
+
+---
+
+🌟 Journey Continues...
+
+Each day is one step closer to my dream — to think, code, and create like a world-class computer scientist.
+Stay tuned for:
+
+Day 4: 🔐 Smart Password Generator
+
+Day 5: 🧮 Mini Calculator App
+
+Day 6+: 🤖 AI and Data Science Projects
+
+
+
+---
+
+✍️ Author
+
+Stuart Abhishek
+15-year-old developer on a mission to reach IIT Madras → MIT / Stanford CSE.
+
+> “Code with purpose. Learn with passion.”
+
+
+
+
+---
 
 
   
