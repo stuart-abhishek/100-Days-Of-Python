@@ -14,7 +14,7 @@ Learn to think like a programmer 💻
 
 Develop creative and impactful projects 🚀
 
-Prepare myself for IIT Madras → MIT/Stanford Computer Science goals 🎯
+Prepare myself for MIT/Stanford Computer Science goals 🎯
 
 
 
