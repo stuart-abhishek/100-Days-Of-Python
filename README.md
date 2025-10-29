@@ -177,3 +177,36 @@ Add more quote categories (study, coding, motivation)
 Add color output using colorama
 
 Turn this into a GUI or web-based app in future days
+
+
+🧠 Day 3 – Smart Math Quiz with Scoring System 🎯
+
+🔹 Project Title
+**Smart Math Quiz** — An adaptive Python quiz that challenges your arithmetic skills intelligently.
+
+🔹 Project Description
+This interactive quiz automatically generates random math problems, adjusts difficulty based on performance, and tracks your score in real time. It includes level-ups, penalties, and a final summary.
+
+🔹 Concepts Used
+- Functions & Modular Programming  
+- Random Number Generation  
+- Loops & Conditionals  
+- Input Validation  
+- Basic Arithmetic Operations  
+- Score Tracking & Time Measurement
+
+🔹 What I Learned
+- How to structure functions for clarity  
+- How to make difficulty adaptive  
+- How to measure user performance logically  
+- How to write clean, interactive console programs  
+
+🔹 Future Improvements
+- Add a GUI interface using `tkinter`  
+- Store high scores in a text file  
+- Introduce multiple question types (fractions, powers, etc.)  
+
+
+  
+
+
