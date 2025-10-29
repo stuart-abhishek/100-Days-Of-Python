@@ -1,0 +1,72 @@
+# Day 3 – Smart Math Quiz with Scoring System 🎯
+# Author: Stuart Abhishek
+# Purpose: Adaptive arithmetic quiz that challenges the user intelligently.
+
+import random
+import time
+
+def generate_question(level):
+    """Return a tuple (question, correct_answer) based on difficulty level."""
+    if level == 1:
+        a, b = random.randint(1, 10), random.randint(1, 10)
+        op = random.choice(['+', '-'])
+    elif level == 2:
+        a, b = random.randint(10, 50), random.randint(1, 20)
+        op = random.choice(['+', '-', '*'])
+    else:
+        a, b = random.randint(20, 100), random.randint(1, 25)
+        op = random.choice(['+', '-', '*', '//'])
+
+    question = f"{a} {op} {b}"
+    answer = eval(question)
+    return question, answer
+
+def math_quiz():
+    print("🧮 Welcome to the Smart Math Quiz!")
+    print("Answer as many questions as you can. Type 'quit' to stop.\n")
+
+    level = 1
+    score = 0
+    question_count = 0
+    start_time = time.time()
+
+    while True:
+        question_count += 1
+        q, correct = generate_question(level)
+        user = input(f"Q{question_count}: {q} = ")
+
+        if user.lower() == "quit":
+            break
+
+        try:
+            if int(user) == correct:
+                score += 10
+                print("✅ Correct!")
+                if score % 50 == 0:
+                    level = min(level + 1, 3)
+                    print("🚀 Level Up! Difficulty increased.")
+            else:
+                score -= 5
+                print(f"❌ Wrong! The correct answer was {correct}.")
+        except ValueError:
+            print("⚠️ Please enter a valid number or 'quit' to exit.")
+
+        print(f"Current Score: {score}\n")
+
+    duration = round(time.time() - start_time, 2)
+    print("=" * 55)
+    print("🏁 Quiz Summary")
+    print(f"Total Questions: {question_count - 1}")
+    print(f"Final Score: {score}")
+    print(f"Time Spent: {duration} seconds")
+    if score >= 100:
+        print("🌟 Brilliant work! You think like a real mathematician.")
+    elif score >= 50:
+        print("💪 Great job! Keep sharpening your mind.")
+    else:
+        print("📘 Practice makes perfect — keep going!")
+    print("=" * 55)
+    print("~ Program created by Stuart Abhishek (Day 3 of 100 Days of Python) ~")
+
+if __name__ == "__main__":
+    math_quiz()
