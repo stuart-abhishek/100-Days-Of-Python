@@ -18,9 +18,10 @@ Each day I design, code, and upload a new project — from beginner fundamentals
 
 Day	Project	Description	Status
 
-1	Hello World	My first Python program — starting my journey	✅
-2	AI Quote Generator	Interactive personalized motivational quote app	✅
-3	Smart Math Quiz	Adaptive arithmetic quiz with scoring system	✅
+1 	Hello World	My first Python program — starting my journey	✅
+2	 AI Quote Generator	Interactive personalized motivational quote app	✅
+3 	Smart Math Quiz	Adaptive arithmetic quiz with scoring system	✅
+4 Secure Password Engineer(generator + analyzer) ✅
 
 
 
@@ -277,6 +278,56 @@ Introduce GUI using tkinter
 Add division and power levels for advanced math
 
 
+---
+
+## 🧠 Day 4 — Secure Password Engineer 🔐
+
+### 🔹 Project Title
+**Secure Password Engineer** — Cryptographically secure password generator + strength analyzer.
+
+### 🔹 Project Description
+Generates strong passwords with customizable character sets using Python’s `secrets` (CSPRNG),
+and analyzes any password for entropy (bits), common patterns, repeated/sequential runs, and ambiguous characters.
+Produces a 0–100 score, a clear grade, and practical suggestions. Optional local logging.
+
+### 🔹 Concepts Used
+- Cryptographic randomness with `secrets`
+- Entropy estimation & effective charset analysis
+- Pattern detection (common words, repeats, sequences)
+- Clean CLI design, modular functions, robust I/O
+- Filesystem logging with `pathlib`
+
+### 🔹 Example (Generate & Analyze)
+
+🔐 Secure Password Engineer — Day 4
+
+1. Generate a strong password
+
+
+2. Analyze an existing password
+
+
+3. Generate & analyze (recommended) q) Quit Choose an option: 3 Desired length (recommend 16–24): 18 Include lowercase? [Y/n]: Include uppercase? [Y/n]: Include digits? [Y/n]: Include symbols? [Y/n]: Avoid ambiguous characters (O/0, l/1)? [Y/n]:
+
+
+
+Generated password: 7uG}xVbR%pZt_fH3q*
+
+Score: 93/100  |  Grade: Very Strong Length: 18  |  Entropy: 113.61 bits Longest sequential run: 1 Repeated runs: False  |  Common pattern: False Ambiguous chars ratio: 0.0
+
+Suggestions: • Good character diversity — aim for 3–4 categories. • Great length — keep 16+ for stronger security.
+
+### 🔹 What I Learned
+- Why `secrets` > `random` for security
+- How to estimate entropy and explain strength in bits
+- How to detect human patterns attackers exploit
+- How to give users actionable security guidance
+
+### 🔹 Future Improvements
+- Add passphrase mode (diceware-style)
+- Add exclusion list (user-provided words)
+- Export analysis report as JSON/CSV
+
 
 ---
 
@@ -284,8 +335,6 @@ Add division and power levels for advanced math
 
 Each day is one step closer to my dream — to think, code, and create like a world-class computer scientist.
 Stay tuned for:
-
-Day 4: 🔐 Smart Password Generator
 
 Day 5: 🧮 Mini Calculator App
 
