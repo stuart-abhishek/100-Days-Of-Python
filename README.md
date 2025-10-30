@@ -21,7 +21,7 @@ Day	Project	Description	Status
 1 	Hello World	My first Python program — starting my journey	✅
 2	 AI Quote Generator	Interactive personalized motivational quote app	✅
 3 	Smart Math Quiz	Adaptive arithmetic quiz with scoring system	✅
-4 Secure Password Engineer(generator + analyzer) ✅
+4 Secure Password Engineer (generator + analyzer) ✅
 
 
 
