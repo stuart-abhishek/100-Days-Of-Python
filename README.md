@@ -37,10 +37,11 @@ Each project is designed with clean structure, interactive design, and modern pr
 
 Day	Project	Description	Status
 
-1	Hello World	My first Python program — start of my journey	✅
-2	AI Quote Generator	Personalized motivational quote generator	✅
-3	Smart Math Quiz	Adaptive arithmetic quiz with scoring & logic	✅
-4	Secure Password Engineer	Cryptographically secure password generator + analyzer	✅
+1 	Hello World	My first Python program — start of my journey	✅
+2	 AI Quote Generator	Personalized motivational quote generator	✅
+3	 Smart Math Quiz	Adaptive arithmetic quiz with scoring & logic	✅
+4 	Secure Password Engineer	Cryptographically secure password generator + analyzer	✅
+5 Natural language smart calculator ✅
 
 
 
@@ -362,12 +363,49 @@ Writing security-conscious, user-friendly code
 Designing an AI-style analytical program
 
 
+---
+
+## 🧠 Day 5 — Natural-Language Smart Calculator 🤖
+
+### 🔹 Project Title
+**Smart Calculator** — Understands human language to perform arithmetic.
+
+### 🔹 Project Description
+A Python program that interprets natural-language expressions like  
+“add 12 and 45”, “subtract 10 from 50”, “square root of 81”,  
+and computes accurate results.  
+It mimics early natural-language interfaces — showing algorithmic reasoning and text processing skills.
+
+### 🔹 Concepts Used
+- Regular Expressions (`re`) for text extraction  
+- Conditional Logic for intent detection  
+- Mathematical operations (`math` module)  
+- Exception handling  
+- Clean modular programming  
+
+### 🔹 Example Output
+
+🧮 Welcome to the Natural-Language Smart Calculator! 👉 Enter expression: add 24 and 65 ✅ Result: 89.0
+
+👉 Enter expression: subtract 10 from 42 ✅ Result: 32.0
+
+👉 Enter expression: square root of 81 ✅ Result: 9.0
+
+👉 Enter expression: cube of 3 ✅ Result: 27.0
+
+### 🔹 What I Learned
+- Translating language into computation  
+- Regex pattern matching and token parsing  
+- Handling ambiguous input gracefully  
+- Thinking algorithmically like a language-model designer  
+
+### 🔹 Future Improvements
+- Integrate `nltk` or `spaCy` for deeper natural-language parsing  
+- Add unit conversion and scientific-mode operations
 
 ---
 
 🌟 The Journey Ahead
-
-Day 5 → Mini Calculator App 🧮
 
 Day 6 → AI-Based Password Strength Predictor 🤖
 
