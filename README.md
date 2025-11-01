@@ -42,7 +42,7 @@ Day	Project	Description	Status
 3	 Smart Math Quiz	Adaptive arithmetic quiz with scoring & logic	✅
 4 	Secure Password Engineer	Cryptographically secure password generator + analyzer	✅
 5 Natural language smart calculator ✅
-
+6 Smart Data Analyzer ✅
 
 
 ---
@@ -405,9 +405,48 @@ It mimics early natural-language interfaces — showing algorithmic reasoning an
 
 ---
 
+## 🧠 Day 6 — Smart Data Analyzer 📊
+
+### 🔹 Project Title
+**Smart Data Analyzer** — automatic statistical and correlation analysis of CSV datasets.
+
+### 🔹 Project Description
+This Python engine loads any CSV file and instantly produces summary statistics, detects strong correlations, and provides simple “insights.”  
+It demonstrates data-science fundamentals, algorithmic thinking, and data-driven storytelling.
+
+### 🔹 Concepts Used
+- File I/O & CSV parsing (`csv.DictReader`)
+- Statistics & probability (`statistics`, `math`)
+- Correlation coefficient computation
+- Data visualization with `matplotlib`
+- Algorithmic automation & reporting
+
+### 🔹 Example Output
+
+📊 Smart Data Analyzer — Day 6 Enter CSV file path (e.g., data.csv): students.csv
+
+📈 Summary Statistics • Math: mean=78.4, median=80.0, stdev=10.2, n=50 • Science: mean=76.1, median=75.0, stdev=9.5, n=50 • English: mean=81.6, median=82.0, stdev=8.9, n=50
+
+🤝 Significant Correlations (|r| ≥ 0.5) Math ↔ Science: r = 0.91 (direct correlation) English ↔ Math: r = 0.73 (direct correlation)
+
+✨ Insights: Strongest link: Math and Science (0.91). Consider exploring cause-effect relationship. Report complete ✅
+
+### 🔹 What I Learned
+- Reading structured data programmatically  
+- Statistical reasoning (mean, median, stdev, correlation)  
+- Automating analysis workflows like real data scientists  
+- Presenting information visually and narratively  
+
+### 🔹 Future Improvements
+- Integrate `pandas` for larger datasets  
+- Export summary reports as PDF  
+- Apply linear regression to predict relationships  
+- Build a web dashboard using `Streamlit`
+
+---
+
 🌟 The Journey Ahead
 
-Day 6 → AI-Based Password Strength Predictor 🤖
 
 Day 7+ → Data Science, Machine Learning & Real-World Projects
 
