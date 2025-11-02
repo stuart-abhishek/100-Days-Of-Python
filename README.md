@@ -43,6 +43,7 @@ Day	Project	Description	Status
 4 	Secure Password Engineer	Cryptographically secure password generator + analyzer	✅
 5 Natural language smart calculator ✅
 6 Smart Data Analyzer ✅
+7 Predictive Insight Engine ✅
 
 
 ---
@@ -444,11 +445,73 @@ It demonstrates data-science fundamentals, algorithmic thinking, and data-driven
 - Build a web dashboard using `Streamlit`
 
 ---
+  
+## 🧠 Day 7 — Predictive Insight Engine 📈
+
+### 🔹 Project Title
+**Predictive Insight Engine** — Univariate Linear Regression with Cross-Validation, Outlier Handling, Plots, and a Model Card.
+
+### 🔹 Project Description
+A disciplined mini-ML pipeline:
+- Loads a CSV, selects a numeric feature (X) and target (Y)
+- Optional z-score outlier removal
+- Standardizes features/targets
+- Trains linear regression via gradient descent with early stopping
+- Reports **R², MAE, RMSE** and performs **5-fold cross-validation**
+- Shows **fitted line** and **residual diagnostics** plots
+- Exports a **JSON model card** (coefficients, scalers, CV metrics, metadata)
+
+### 🔹 Concepts Used
+- Data hygiene (z-scores), standardization
+- Gradient descent & early stopping
+- Generalization via cross-validation
+- Multiple evaluation metrics (R², MAE, RMSE)
+- Residual analysis and visualization
+- Reproducibility (JSON model card)
+
+### 🔹 Example Session
+
+📈 Predictive Insight Engine — Day 7 Enter CSV path (e.g., data.csv): students.csv Choose FEATURE (X):
+
+1. StudyHours
+
+
+2. SleepHours
+
+
+3. MathScore Select number: 1 Choose TARGET (Y):
+
+
+4. MathScore
+
+
+5. ScienceScore Select number: 1 Remove outliers with z-score > 3? [Y/n]: Y Outlier filter: 52 → 50 usable pairs.
+
+
+
+🔍 5-fold Cross-Validation R2_mean: 0.8123 R2_std: 0.0431 MAE_mean: 3.215 RMSE_mean: 4.097
+
+✅ Fitted on full data R²: 0.8467 | MAE: 2.98 | RMSE: 3.82
+
+Show fitted-line plot? [Y/n]: Y Show residuals plot? [Y/n]: Y Save model card JSON? [Y/n]: Y 📝 Model card saved to: Day-07/model_card_StudyHours_to_MathScore.json
+
+### 🔹 What I Learned
+- How to build a small but **serious** ML workflow from scratch  
+- Why **cross-validation** matters for generalization  
+- Reading models beyond a single score using residuals  
+- The importance of **reproducibility** through a model card
+
+### 🔹 Future Improvements
+- Multi-feature regression (normal equations)
+- Polynomial basis expansion with regularization
+- Confidence intervals and prediction intervals
+- Export plots + report as a single HTML/PDF
+
+
+---
+
 
 🌟 The Journey Ahead
-
-
-Day 7+ → Data Science, Machine Learning & Real-World Projects
 
 
 Each project will advance in difficulty and creativity — reflecting both engineering skill and problem-solving ability that top universities like MIT, Stanford, and Harvard value deeply.
