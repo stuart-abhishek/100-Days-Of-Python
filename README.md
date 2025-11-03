@@ -44,7 +44,7 @@ Day	Project	Description	Status
 5 Natural language smart calculator ✅
 6 Smart Data Analyzer ✅
 7 Predictive Insight Engine ✅
-8 From-Scratch Naive Bayes Text Classifier ✅
+8 From Scratch Naive Bayes Text Classifier ✅
 
 
 ---
