@@ -44,6 +44,7 @@ Day	Project	Description	Status
 5 Natural language smart calculator ✅
 6 Smart Data Analyzer ✅
 7 Predictive Insight Engine ✅
+8 From-Scratch Naive Bayes Text Classifier ✅
 
 
 ---
@@ -506,6 +507,58 @@ Show fitted-line plot? [Y/n]: Y Show residuals plot? [Y/n]: Y Save model card JS
 - Polynomial basis expansion with regularization
 - Confidence intervals and prediction intervals
 - Export plots + report as a single HTML/PDF
+
+
+---
+
+## 🧠 Day 8 — From-Scratch Naive Bayes Text Classifier 📨
+
+### 🔹 Project Title
+**Naive Bayes Text Classifier** — pure-Python NLP classifier with CV, explainability, and a model card.
+
+### 🔹 Project Description
+A full, explainable NLP pipeline implemented **from scratch**:
+- Tokenizes text (stopword filtering)
+- Trains a **Multinomial Naive Bayes** with **Laplace smoothing**
+- Performs **5-fold cross-validation** (macro precision/recall/F1, accuracy)
+- Prints a **confusion matrix**
+- Shows **most-informative tokens** via class log-odds
+- Exports a **JSON model card** (priors, vocab size, CV metrics, metadata)
+- Includes an **interactive demo** for live classification
+
+**Input format:** CSV with columns: `text`, `label`.
+
+### 🔹 Concepts Used
+- Probabilistic modeling (Naive Bayes)
+- Tokenization, stopwords, <UNK> handling
+- Cross-validation for generalization
+- Macro-averaged **precision/recall/F1**
+- Explainability (log-odds indicative tokens)
+- Reproducibility (JSON model card)
+
+### 🔹 Example Session
+
+🧠 Day 8 — Naive Bayes Text Classifier (From Scratch) Enter CSV path (must include columns 'text','label'): sms_spam.csv Laplace smoothing alpha [default 1.0]: Keep numeric tokens? [y/N]: y
+
+🔍 5-fold Cross-Validation (macro-averaged): accuracy: 0.962 precision_macro: 0.955 recall_macro: 0.948 f1_macro: 0.951
+
+✅ Fit on full data (reference metrics): accuracy: 0.971 precision_macro: 0.966 recall_macro: 0.959 f1_macro: 0.962
+
+Confusion Matrix (rows=true, cols=pred): ham   spam ham    480     12 spam      5     73
+
+💡 Most-informative tokens (log-odds): ham vs spam: meeting(2.31), home(2.07), okay(1.98), call(1.72), ... spam vs ham: free(3.45), prize(3.23), claim(3.10), txt(2.88), win(2.76), ... 📝 Model card saved to: Day-08/model_card_naive_bayes.json text> win a free prize now! Predicted: spam  |  Probabilities: {'ham': 0.013, 'spam': 0.987}
+
+### 🔹 What I Learned
+- Implementing a classic ML algorithm from first principles
+- Measuring generalization with CV (not just train accuracy)
+- Reading models via **most-informative features**
+- Building explainable, documented ML pipelines
+
+### 🔹 Future Improvements
+- Add TF-IDF weighting
+- Character-level n-grams for robustness
+- ROC-AUC, PR-AUC plots
+- Save/load trained model for reuse
 
 
 ---
