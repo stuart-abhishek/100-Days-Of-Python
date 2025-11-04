@@ -1,4 +1,4 @@
- ---
+---
 
 🐍 100 Days of Python — by Stuart Abhishek
 
@@ -45,6 +45,7 @@ Day	Project	Description	Status
 6 Smart Data Analyzer ✅
 7 Predictive Insight Engine ✅
 8 From Scratch Naive Bayes Text Classifier ✅
+9 Clustering Insight Engine ✅
 
 
 ---
@@ -559,6 +560,47 @@ Confusion Matrix (rows=true, cols=pred): ham   spam ham    480     12 spam      
 - Character-level n-grams for robustness
 - ROC-AUC, PR-AUC plots
 - Save/load trained model for reuse
+
+
+---
+
+## 🧠 Day 9 — Clustering Insight Engine 🌐
+
+### 🔹 Project Title
+**Clustering Insight Engine** — K-Means + PCA implemented from scratch with visualization and a model card.
+
+### 🔹 Project Description
+An unsupervised-learning engine that groups data into clusters, projects them via PCA, and visualizes patterns.  
+It measures convergence, inertia, and exports a reproducible JSON summary.  
+Demonstrates linear algebra, optimization, and data visualization fundamentals.
+
+### 🔹 Concepts Used
+- K-Means clustering (centroid update, inertia)
+- PCA (eigenvectors via power iteration)
+- Z-score normalization
+- Algorithm convergence & tolerance
+- Data visualization (`matplotlib`)
+- Reproducibility via model card
+
+### 🔹 Example Output
+
+🌐 Day 9 — Clustering Insight Engine Enter CSV path: iris_numeric.csv Number of clusters (k): 3
+
+✅ K-Means finished in 12 iterations. Inertia: 48.72 Cluster sizes: [52, 50, 48] 📝 Saved Day-09/model_card_kmeans.json
+
+*(2-D scatter plot of clusters displayed)*
+
+### 🔹 What I Learned
+- Implementing iterative optimization algorithms (K-Means)
+- Reducing high-dimensional data with PCA
+- Visualizing and interpreting unsupervised results
+- Writing clear, reusable scientific code
+
+### 🔹 Future Improvements
+- Add **Elbow method** for automatic k selection  
+- Implement **Silhouette score**  
+- Extend PCA to N components  
+- Build a simple GUI for cluster exploration
 
 
 ---
