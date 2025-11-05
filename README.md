@@ -46,6 +46,7 @@ Day	Project	Description	Status
 7 Predictive Insight Engine ✅
 8 From Scratch Naive Bayes Text Classifier ✅
 9 Clustering Insight Engine ✅
+10 Sudoku Engineer ✅ 
 
 
 ---
@@ -601,6 +602,61 @@ Demonstrates linear algebra, optimization, and data visualization fundamentals.
 - Implement **Silhouette score**  
 - Extend PCA to N components  
 - Build a simple GUI for cluster exploration
+
+
+---
+
+## 🧠 Day 10 — Sudoku Engineer 🧩
+
+### 🔹 Project Title
+**Sudoku Engineer** — Generator + Solver via Exact Cover (Algorithm X), with Uniqueness Check and Difficulty Rating.
+
+### 🔹 Project Description
+A rigorous CS approach to Sudoku:
+- Models Sudoku as an **Exact Cover** problem over 324 constraints
+- Solves using **Algorithm X (Knuth)** with a minimum-remaining-values heuristic
+- **Generates** new puzzles by carving a completed grid while preserving **unique** solutions
+- Rates difficulty using search statistics (nodes explored, backtracks)
+- Clean CLI to **solve from string/file** or **generate by clues**
+
+### 🔹 Concepts Used
+- Constraint modeling & combinatorial search
+- Exact Cover reduction; Algorithm X backtracking
+- Heuristics (MRV), uniqueness testing (multi-solution cutoff)
+- Randomized full-grid construction, symmetric clue removal
+- Software engineering: modularity, CLI, stats-based difficulty
+
+### 🔹 Example Session
+
+🧩 Day 10 — Sudoku Engineer (Algorithm X)
+
+1. Solve from 81-char string
+
+
+2. Solve from text file
+
+
+3. Generate puzzle (unique) by target clues q) Quit Choose: 3 Target number of clues (17..40)? [default 28]:
+
+
+
+🧩 Generated puzzle: . . . | 2 . . | . 1 . . 6 . | . . 3 | . . 7 9 . . | . . . | . . . ------+-------+------ . . . | . 7 . | 4 . . . . 1 | 3 . 6 | 7 . . . . . | . . . | . . . ------+-------+------ . . . | . . . | . . 8 8 . . | 6 . . | . 2 . . 2 . | . . 1 | . . .
+
+Clues: 28 | Rating: Medium Generator effort — Nodes: 1523 | Backtracks: 214 | Time: 1.46s
+
+Tip: Copy puzzle as 81 chars (row-major, '.' for blanks): ...2.. .1..6...3..7 9........ ....7.4.. ..13.67.. ......... .......8 8..6.. .2...1...
+
+### 🔹 What I Learned
+- How to **reduce** a real puzzle to an **exact cover** formulation
+- Implementing a classic **Algorithm X** solver cleanly
+- Designing a **generator** that guarantees **unique** solutions
+- Interpreting search stats as a **difficulty rating**
+
+### 🔹 Future Improvements
+- Dancing Links (DLX) for faster exact cover operations
+- Human-solvable strategy grader (naked pairs, X-wing, etc.)
+- Export to PDF/PNG with pretty render
+- Benchmark suite & seedable generation
 
 
 ---
