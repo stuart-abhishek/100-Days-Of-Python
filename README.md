@@ -46,7 +46,8 @@ Day	Project	Description	Status
 7 Predictive Insight Engine ✅
 8 From Scratch Naive Bayes Text Classifier ✅
 9 Clustering Insight Engine ✅
-10 Sudoku Engineer ✅ 
+10 Sudoku Engineer ✅
+11 MiniGit: a Content-Addressable Version Store ✅
 
 
 ---
@@ -657,6 +658,55 @@ Tip: Copy puzzle as 81 chars (row-major, '.' for blanks): ...2.. .1..6...3..7 9.
 - Human-solvable strategy grader (naked pairs, X-wing, etc.)
 - Export to PDF/PNG with pretty render
 - Benchmark suite & seedable generation
+
+
+---
+
+## 🧠 Day 11 — MiniGit 🗃️
+
+### 🔹 Project Title
+**MiniGit** — a lightweight, content-addressable version store built from scratch.
+
+### 🔹 Project Description
+A tiny re-implementation of Git’s core ideas:
+- Stores files by **SHA-256 hash** (content-addressable)
+- Tracks full directory snapshots as **commits** (DAG structure)
+- Maintains **HEAD**, **commit logs**, and **checkout**
+- Detects added/modified/removed files (`status` command)
+- JSON metadata, deterministic object IDs, fully local
+
+### 🔹 Concepts Used
+- Cryptographic hashing (`hashlib.sha256`)
+- Persistent object storage
+- Directed acyclic graph (commit parent chain)
+- File system traversal, diff logic
+- CLI argument parsing & structured persistence (`json`)
+
+### 🔹 Example Usage
+
+$ python day11_minigit.py init ✅ Initialized empty MiniGit repository in ./.minigit
+
+$ echo "Hello MIT" > hello.txt $ python day11_minigit.py commit "First commit" ✅ Commit created 3fae1b2c - First commit
+
+$ echo "Hello Stanford" > hello.txt $ python day11_minigit.py status 📊 Status vs last commit: Modified: hello.txt
+
+$ python day11_minigit.py commit "Updated greeting" ✅ Commit created 7bfc92ad - Updated greeting
+
+$ python day11_minigit.py log 🕒 Thu Nov 6 20:15:41 2025 🧩 7bfc92ad... 💬 Updated greeting 🕒 Thu Nov 6 20:14:12 2025 🧩 3fae1b2c... 💬 First commit
+
+$ python day11_minigit.py checkout 3fae1b2c ✅ Checked out commit 3fae1b2c
+
+### 🔹 What I Learned
+- How **Git’s architecture** works internally  
+- Designing content-addressable storage (immutable objects)  
+- Building a real-world **DAG data structure**  
+- Understanding version control as a graph problem  
+
+### 🔹 Future Improvements
+- Branching and merging
+- Commit diff viewer
+- Blob compression
+- Remote push/pull simulation
 
 
 ---
