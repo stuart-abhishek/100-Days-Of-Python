@@ -14,7 +14,7 @@
 Welcome to my 100 Days of Python challenge!
 
 This repository documents my 100-day journey to master Python — one project every day, combining creativity, logic, and real-world problem-solving.
-Each project is designed with clean structure, interactive design, and modern programming concepts that reflect the skills of a future Computer Science Engineer at → MIT → Stanford.
+Each project is designed with clean structure, interactive design, and modern programming concepts that reflect the skills of a future Computer Science Engineering at → MIT → Stanford.
 
 
 ---
@@ -723,7 +723,7 @@ Each project will advance in difficulty and creativity — reflecting both engin
 ✍️ Author
 
 👨‍💻 Stuart Abhishek
-16-year-old aspiring Computer Science Engineer
+16-year-old aspiring about Computer Science & AI
 Dream Path:→ MIT / Stanford
 
 > “Discipline beats talent. Consistency builds brilliance.”
