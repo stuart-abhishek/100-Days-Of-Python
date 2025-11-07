@@ -48,6 +48,7 @@ Day	Project	Description	Status
 9 Clustering Insight Engine ✅
 10 Sudoku Engineer ✅
 11 MiniGit: a Content-Addressable Version Store ✅
+12 Distributed MiniGit ✅
 
 
 ---
@@ -707,6 +708,55 @@ $ python day11_minigit.py checkout 3fae1b2c ✅ Checked out commit 3fae1b2c
 - Commit diff viewer
 - Blob compression
 - Remote push/pull simulation
+
+
+---
+
+## 🧠 Day 12 — Distributed MiniGit 🌐
+
+### 🔹 Project Title
+**Distributed MiniGit** — Peer-to-peer push/pull over TCP with content-addressable integrity.
+
+### 🔹 Project Description
+Extends my MiniGit (Day 11) into a tiny **distributed** VCS:
+- Threaded TCP **server** announces inventory (HEAD, commits, objects)
+- **Client push/pull** performs set reconciliation (what am I missing?)
+- Transfers **commits/objects** as JSON-framed messages + raw blobs
+- Verifies **SHA-256** on receive before storing (integrity)
+- Fast-forwards **HEAD** when appropriate (safe sync)
+
+### 🔹 Concepts Used
+- Socket programming (TCP), concurrency (thread-per-connection)
+- Wire protocol design (newline-delimited JSON frames)
+- Content-addressable replication & integrity checks
+- Inventory diff & reconciliation
+- Clean layering on top of a local object store
+
+### 🔹 Example Sessions
+
+Terminal A (server)
+
+$ python Day-12/day12_distributed_minigit.py serve --port 9999 🌐 MiniGit server listening on 0.0.0.0:9999
+
+Terminal B (client in another repo copy)
+
+$ python Day-12/day12_distributed_minigit.py pull --host 127.0.0.1 --port 9999 ⬇️  Pulling commits: 2, objects: 5 🔁 Fast-forwarded HEAD to 3fae1b2c ✅ Pull complete.
+
+Push back
+
+$ python Day-12/day12_distributed_minigit.py push --host 127.0.0.1 --port 9999 ➡️  Pushing commits: 1, objects: 1 ✅ Push complete.
+
+### 🔹 What I Learned
+- Designing a **minimal, auditable network protocol**
+- Preventing corruption via **content-hash verification**
+- Reconciling distributed state safely (fast-forward HEAD)
+- Building distributed features on top of a local **content store**
+
+### 🔹 Future Improvements
+- Branch refs & non-fast-forward safety checks
+- Packfiles / compression, chunked streaming
+- Auth (HMAC or public-key signatures)
+- Delta transmission & bloom filters for faster discovery
 
 
 ---
