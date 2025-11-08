@@ -49,6 +49,7 @@ Day	Project	Description	Status
 10 Sudoku Engineer ✅
 11 MiniGit: a Content-Addressable Version Store ✅
 12 Distributed MiniGit ✅
+13 CRDT Notes ✅
 
 
 ---
@@ -757,6 +758,60 @@ $ python Day-12/day12_distributed_minigit.py push --host 127.0.0.1 --port 9999 �
 - Packfiles / compression, chunked streaming
 - Auth (HMAC or public-key signatures)
 - Delta transmission & bloom filters for faster discovery
+
+
+---
+
+## 🧠 Day 13 — CRDT Notes 📝
+
+### 🔹 Project Title
+**CRDT Notes** — Offline-first collaborative notes with LWW-Registers, Lamport clocks, tombstones, and peer sync.
+
+### 🔹 Project Description
+A conflict-free replicated data type (CRDT) system for notes:
+- Each note field (title, body, deleted) is a **Last-Writer-Wins Register** with a **Lamport timestamp** → deterministic conflict resolution without wall-clock time.
+- **Tombstones** represent deletions (merge-safe).
+- **Idempotent, commutative, associative merge** guarantees eventual consistency.
+- Tiny **TCP sync**: peers exchange state JSON and both store the **same merged state**.
+
+### 🔹 Concepts Used
+- CRDT design (LWW-Register), tombstones
+- **Lamport clock** for causality without real-time clocks
+- Deterministic conflict resolution `(ts, node)` ordering
+- Idempotent, associative, commutative **merge()**
+- Minimal wire protocol; offline → online sync convergence
+
+### 🔹 Example Sessions
+
+Replica A
+
+$ python Day-13/day13_crdt_notes.py init --node-id A $ python Day-13/day13_crdt_notes.py new "Groceries" "Milk, eggs, bread" 🆕 Created note 6a7d-...
+
+Replica B
+
+$ python Day-13/day13_crdt_notes.py init --node-id B $ python Day-13/day13_crdt_notes.py new "Groceries" "Milk, eggs, bread, apples"
+
+Now B edits title offline, A deletes offline:
+
+$ python Day-13/day13_crdt_notes.py edit 6a7d-... --title "Shopping" $ python Day-13/day13_crdt_notes.py delete 6a7d-...
+
+Sync (run server on A)
+
+$ python Day-13/day13_crdt_notes.py serve --port 9500  # on A $ python Day-13/day13_crdt_notes.py sync --host 127.0.0.1 --port 9500  # on B
+
+🔁 Sync complete. States converged.
+
+### 🔹 What I Learned
+- How to design state for **eventual consistency** without a central server
+- Why **Lamport timestamps** are safer than wall clocks
+- How to encode **merge laws** (commutative, associative, idempotent)
+- Building a small but real **distributed data structure** with clear semantics
+
+### 🔹 Future Improvements
+- Per-character CRDT (RGA) for collaborative rich-text
+- Delta syncs (state diffing) and Bloom filters
+- Signatures over state for authenticated replication
+- CRDT metrics dashboard (visualize merges & causality)
 
 
 ---
