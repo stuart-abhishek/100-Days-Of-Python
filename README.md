@@ -50,6 +50,7 @@ Day	Project	Description	Status
 11 MiniGit: a Content-Addressable Version Store ✅
 12 Distributed MiniGit ✅
 13 CRDT Notes ✅
+14 CRDT Collaborative Editor ✅
 
 
 ---
@@ -812,6 +813,65 @@ $ python Day-13/day13_crdt_notes.py serve --port 9500  # on A $ python Day-13/da
 - Delta syncs (state diffing) and Bloom filters
 - Signatures over state for authenticated replication
 - CRDT metrics dashboard (visualize merges & causality)
+
+
+---
+
+## 🧠 Day 14 — CRDT Collaborative Editor ✍️
+
+### 🔹 Project Title
+**CRDT Collaborative Editor** — Logoot/LSEQ-style per-character CRDT with position identifiers, Lamport clocks, tombstones, and peer sync.
+
+### 🔹 Project Description
+A sequence-CRDT that lets multiple replicas edit a document **offline** and later **converge** without conflicts:
+- Each character is tagged with a **position identifier** (list of `(digit, site)`), ordered lexicographically.
+- **Concurrent inserts** choose random digits “between” neighbors (LSEQ/Logoot) — no global indices.
+- **Deletes** are **tombstones** (idempotent).
+- **Lamport clocks** ensure causal monotonicity; merge is **commutative, associative, idempotent**.
+- Tiny **TCP sync**: peers exchange state JSON and both store the same merged document.
+
+### 🔹 Concepts Used
+- Sequence CRDTs (Logoot/LSEQ) & identifier allocation
+- Causality via **Lamport clocks**
+- Tombstones & idempotent merge
+- Binary search insertion by identifier
+- Minimal wire protocol over TCP
+
+### 🔹 Example Sessions
+
+Replica A
+
+$ python Day-14/day14_crdt_editor.py init --site A $ python Day-14/day14_crdt_editor.py insert 0 "Hel" $ python Day-14/day14_crdt_editor.py insert 3 "lo" $ python Day-14/day14_crdt_editor.py show Hello
+
+Replica B (offline)
+
+$ python Day-14/day14_crdt_editor.py init --site B $ python Day-14/day14_crdt_editor.py insert 0 "H" $ python Day-14/day14_crdt_editor.py insert 1 "i!" $ python Day-14/day14_crdt_editor.py delete 1 --count 1   # remove 'i' $ python Day-14/day14_crdt_editor.py show H!
+
+Sync
+
+A acts as server:
+
+$ python Day-14/day14_crdt_editor.py serve --port 9600
+
+B pulls and merges:
+
+$ python Day-14/day14_crdt_editor.py sync --host 127.0.0.1 --port 9600 🔁 Sync complete. States converged.
+
+Both replicas now:
+
+$ python Day-14/day14_crdt_editor.py show Hello!
+
+### 🔹 What I Learned
+- How sequence CRDTs avoid conflicts without locks or central servers  
+- Why **identifier growth** and **random allocation** matter for balance  
+- Designing merges to be **commutative/associative/idempotent**  
+- Building a minimal yet correct **offline-first** collaborative system
+
+### 🔹 Future Improvements
+- Vector clocks for richer causality / causal broadcast
+- Delta sync (op-based) + Bloom filters instead of full state
+- Web UI (Flask + WebSockets) for real-time visual collaboration
+- Balanced allocation strategies (boundary strategies, base tuning)
 
 
 ---
