@@ -51,6 +51,7 @@ Day	Project	Description	Status
 12 Distributed MiniGit ✅
 13 CRDT Notes ✅
 14 CRDT Collaborative Editor ✅
+15 Neural Network From Scratch + Visualizer ✅
 
 
 ---
@@ -875,6 +876,49 @@ $ python Day-14/day14_crdt_editor.py show Hello!
 
 
 ---
+
+## 🧠 Day 15 — Neural Network From Scratch + Visualizer 🧩
+
+### 🔹 Project Title
+**Neural Network From Scratch + Visualizer** — a NumPy implementation of a 2-layer feed-forward neural network with real-time loss and decision-boundary visualization.
+
+### 🔹 Project Description
+Implements the mathematical foundations of a small neural network *without* deep-learning frameworks:
+- Forward / back-propagation equations derived and coded manually  
+- Trains on synthetic 2-D data (circle classification)  
+- Plots **loss curve** and **decision boundary** to verify learning visually  
+
+### 🔹 Concepts Used
+- Linear algebra (matrix multiplication, gradients)
+- Activation functions (tanh, sigmoid)
+- Back-propagation and gradient descent
+- Overfitting control & visualization
+- Scientific computing with NumPy + Matplotlib
+
+### 🔹 Example Output
+
+Epoch 1: loss=0.7039
+Epoch 100: loss=0.3827
+Epoch 500: loss=0.1204
+Epoch 1000: loss=0.0558
+
+*(Loss curve and 2-D classification boundary plots appear.)*
+
+### 🔹 What I Learned
+- How neural nets actually compute gradients and learn  
+- Numerical stability issues ( ε to avoid log(0) )  
+- Translating math (∂L/∂W, ∂L/∂b) into vectorized NumPy code  
+- Visual debugging of optimization processes  
+
+### 🔹 Future Improvements
+- Add ReLU, softmax, and multi-class classification  
+- Mini-batch training and learning-rate schedules  
+- Save/load weights and plot accuracy vs epochs  
+- Build a Flask demo for interactive classification
+
+
+---
+
 
 
 🌟 The Journey Ahead
