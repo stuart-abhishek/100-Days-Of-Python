@@ -919,6 +919,49 @@ Epoch 1000: loss=0.0558
 
 ---
 
+## 🧠 Day 16 — MiniML: Mini functional language with Hindley–Milner type inference
+
+### 🔹 Project Title
+**MiniML** — a tiny ML-style functional language with parsing, evaluation, and Hindley–Milner (HM) type inference (let-polymorphism).
+
+### 🔹 Project Description
+This project implements a minimal functional language with:
+- Integers and booleans
+- Lambda expressions (anonymous functions), application, `let`, and `if`
+- End-to-end pipeline: **lexer → parser → AST → type inference (HM) → interpreter**
+- **Hindley–Milner (Algorithm W)** implementation: type variables, unification, occurs-check, generalization & instantiation
+- A REPL with type queries and example programs
+
+It demonstrates compiler/front-end and programming-language theory implemented in clear Python.
+
+### 🔹 Concepts Used
+- Lexing & parsing (recursive descent)
+- AST design & interpreter (closures, lexical scope)
+- Hindley–Milner type inference (unification, generalization)
+- Let-polymorphism & type schemes
+- Algorithmic thinking and formal methods
+
+### 🔹 Example Usage / Output
+
+MiniML> let id = \x -> x in id 5 Type: Int 5
+
+MiniML> :t \f -> \x -> f (f x) Type: ((t0 -> t0) -> t0 -> t0) MiniML> let compose = \f -> \g -> \x -> f (g x) in compose Type: ((t0 -> t1) -> (t2 -> t0) -> t2 -> t1)
+
+### 🔹 What I Learned
+- How to implement a type checker and inference engine from first principles
+- How unification and occurs-check prevent ill-typed terms
+- How polymorphism emerges with `let` generalization
+- How to structure a small compiler front-end and an interpreter
+
+### 🔹 Future Improvements
+- Add algebraic data types and pattern matching
+- Improve parser to support multi-arg lambdas and syntactic sugar
+- Add better pretty-printing of polymorphic types (rename type variables e.g., 'a, 'b)
+- Compile to bytecode and add optimizer passes
+
+
+---
+
 
 
 🌟 The Journey Ahead
