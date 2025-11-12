@@ -52,6 +52,7 @@ Day	Project	Description	Status
 13 CRDT Notes ✅
 14 CRDT Collaborative Editor ✅
 15 Neural Network From Scratch + Visualizer ✅
+16 MiniML: Mini functional language with Hindley–Milner type inference ✅
 
 
 ---
